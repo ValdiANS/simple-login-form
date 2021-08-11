@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Login Form</title>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <div class="form-wrapper__title">
+      <h1>Login</h1>
+    </div>
+
+    <form class="form">
+      
+      <!-- input-bar -->
+      <div class="input-wrapper">
+        <div class="input__label">
+          <label for="username">Username</label>
+        </div>
+        
+        <div class="input-bar-wrapper">
+          <input class="input-bar" id="username" name="username" type="text" />
+          <div class="reset-value" id="resetValue">&#x2716;</div>
+        </div>
+
+        <div class="input__error-msg">
+          <!-- Error Message -->
+          invalid username !!!
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <div class="input__label">
+          <label for="password">Password</label>
+        </div>
+
+        <div class="input-bar-wrapper">
+          <input class="input-bar" id="password" name="password" type="password" />
+          <div class="reset-value" id="resetValue">&#x2716;</div>
+        </div>
+        
+        <div class="input__error-msg">
+          <!-- Error Message -->
+          
+        </div>
+      </div>
+
+      <input id="submit" type="submit" value="submit"/>
+    </form>
+    
+  </div>
+  
+</body>
+</html>
