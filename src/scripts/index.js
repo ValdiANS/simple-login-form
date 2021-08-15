@@ -55,3 +55,7 @@ inputBarElm.forEach((inputBar) => {
     ]);
   });
 });
+
+submitElm.addEventListener('click', (event) => {
+  event.preventDefault();
+});
