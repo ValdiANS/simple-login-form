@@ -26,16 +26,16 @@ function inputValidation({ inputElm, inputErrMessageElm }) {
 // If form is valid, then submit button will not be disabled.
 // If form is not valid, then submit button will be disabled.
 function formValidation(inputFieldElmList) {
-  let validList = true;
+  let valid = true;
 
   inputFieldElmList.forEach((inputFieldElm) => {
     if (inputFieldElm.classList.contains('invalid') || inputFieldElm.value === '') {
-      validList = false;
+      valid = false;
       return;
     }
   });
 
-  if (!validList) {
+  if (!valid) {
     submitElm.disabled = true;
   } else {
     submitElm.disabled = false;
