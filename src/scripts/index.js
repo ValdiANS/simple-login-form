@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-return */
 /* eslint-disable no-param-reassign */
 import '../styles/style.css';
 
@@ -25,17 +26,16 @@ function inputValidation({ inputElm, inputErrMessageElm }) {
 // If form is valid, then submit button will not be disabled.
 // If form is not valid, then submit button will be disabled.
 function formValidation(inputFieldElmList) {
-  const validList = [];
+  let validList = true;
 
   inputFieldElmList.forEach((inputFieldElm) => {
     if (inputFieldElm.classList.contains('invalid') || inputFieldElm.value === '') {
-      validList.push(false);
-    } else {
-      validList.push(true);
+      validList = false;
+      return;
     }
   });
 
-  if (validList.includes(false)) {
+  if (!validList) {
     submitElm.disabled = true;
   } else {
     submitElm.disabled = false;
